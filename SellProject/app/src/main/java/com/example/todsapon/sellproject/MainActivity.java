@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
             holder.txt_name_product.setText(mProductItems.get(position).getNameProduct());
             holder.txt_count_in_list.setText(String.valueOf(mProductItems.get(position).getCount()));
-            holder.txt_price_in_list.setText(String.valueOf(mProductItems.get(position).getCurrent()));
+            holder.txt_price_in_list.setText(String.valueOf(mProductItems.get(position).getPriceIn()));
 
 
             holder.btn_add.setOnClickListener(new View.OnClickListener() {
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                     if (count >= 0) {
                         count++;
                     }
-                    
+
                     mProductItems.get(position).setCount(count);
                     holder.txt_count_in_list.setText(String.valueOf(mProductItems.get(position).getCount()));
 
@@ -133,7 +133,9 @@ public class MainActivity extends AppCompatActivity {
                     txt_count_in_main.setText(String.valueOf(count_));
 
                     /*การคิดราคา*/
-
+                    int price = mProductItems.get(position).getPrice() * mProductItems.get(position).getCount();
+                    mProductItems.get(position).setPriceIn(price);
+                    holder.txt_price_in_list.setText(String.valueOf(mProductItems.get(position).getPriceIn()));
 
                  /*   ViewGroup parent = (ViewGroup) v.getParent();
                     TextView txt_count_in_list = (TextView) parent.findViewById(R.id.txt_number_item);
@@ -172,7 +174,9 @@ public class MainActivity extends AppCompatActivity {
                     holder.txt_count_in_list.setText(String.valueOf(mProductItems.get(position).getCount()));
 
                     int count_ = Integer.parseInt((String) txt_count_in_main.getText());
-                    if(count_>=1){count_ = count_ - 1;}
+                    if (count_ >= 1) {
+                        count_ = count_ - 1;
+                    }
                     txt_count_in_main.setText(String.valueOf(count_));
                     /*การคิดราคา*/
 

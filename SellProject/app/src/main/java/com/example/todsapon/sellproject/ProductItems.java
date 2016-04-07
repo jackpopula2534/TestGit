@@ -6,7 +6,7 @@ package com.example.todsapon.sellproject;
 public class ProductItems {
 
     private String nameProduct;
-    private int price;
+    private int price,priceIn;
     private int amount;
     private int count;
     private int current;
@@ -37,6 +37,14 @@ public class ProductItems {
     public ProductItems(String nameProduct, int price) {
         this.nameProduct = nameProduct;
         this.price = price;
+    }
+
+    public int getPriceIn() {
+        return priceIn;
+    }
+
+    public void setPriceIn(int priceIn) {
+        this.priceIn = priceIn;
     }
 
     public void setAmount(int amount) {
