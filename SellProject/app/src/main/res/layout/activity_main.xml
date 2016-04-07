@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.todsapon.sellproject.MainActivity">
+
+
+        <ListView
+            android:id="@+id/lv_item"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@color/gray"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <TextView
+                android:textColor="@color/White"
+                android:layout_gravity="center"
+                android:text="Amount : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/txt_amount"
+                android:textColor="@color/Blue2"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="@color/White"
+                android:layout_gravity="center"
+                android:text="Is the total amount :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt_sum"
+                android:textStyle="bold"
+                android:textColor="@color/Blue2"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="@color/White"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:text="BAHT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+</RelativeLayout>
