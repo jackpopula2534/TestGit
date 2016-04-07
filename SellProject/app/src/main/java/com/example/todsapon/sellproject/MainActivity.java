@@ -110,21 +110,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
             holder.txt_name_product.setText(mProductItems.get(position).getNameProduct());
-            /*holder.txt_count_in_list.setText(String.valueOf(mProductItems.get(position).getCount()));*/
+            holder.txt_count_in_list.setText(String.valueOf(mProductItems.get(position).getCount()));
             holder.txt_price_in_list.setText(String.valueOf(mProductItems.get(position).getCurrent()));
 
 
             holder.btn_add.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int count = Integer.parseInt((String) holder.txt_count_in_list.getText());
-                    if (count >= 0) {
-                        count++;
-                    }
-                    holder.txt_count_in_list.setText(String.valueOf(count));
                     /*การนับจำนวน*/
 
-                  /*  int count = Integer.parseInt((String) holder.txt_count_in_list.getText());
+                    int count = Integer.parseInt((String) holder.txt_count_in_list.getText());
 
                     if (count >= 0) {
                         count++;
@@ -135,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
 
                     int count_ = Integer.parseInt((String) txt_count_in_main.getText());
                     count_ = count_ + 1;
-                    txt_count_in_main.setText(String.valueOf(count_));*/
+                    txt_count_in_main.setText(String.valueOf(count_));
 
                     /*การคิดราคา*/
 
