@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
                         count++;
                     }
 
+
                     mProductItems.get(position).setCount(count);
                     holder.txt_count_in_list.setText(String.valueOf(mProductItems.get(position).getCount()));
 
